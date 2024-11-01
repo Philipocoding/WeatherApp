@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
+            txtbLocation = new TextBox();
             btnSearch = new Button();
             label1 = new Label();
             pcbIcon = new PictureBox();
@@ -44,13 +44,13 @@
             ((System.ComponentModel.ISupportInitialize)pcbIcon).BeginInit();
             SuspendLayout();
             // 
-            // textBox1
+            // txtbLocation
             // 
-            textBox1.Font = new Font("Segoe UI", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(216, 34);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(348, 57);
-            textBox1.TabIndex = 0;
+            txtbLocation.Font = new Font("Segoe UI", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtbLocation.Location = new Point(216, 34);
+            txtbLocation.Name = "txtbLocation";
+            txtbLocation.Size = new Size(348, 57);
+            txtbLocation.TabIndex = 0;
             // 
             // btnSearch
             // 
@@ -61,6 +61,7 @@
             btnSearch.TabIndex = 1;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
             // 
             // label1
             // 
@@ -187,9 +188,10 @@
             Controls.Add(pcbIcon);
             Controls.Add(label1);
             Controls.Add(btnSearch);
-            Controls.Add(textBox1);
+            Controls.Add(txtbLocation);
             Name = "MainScreen";
             Text = "Form2";
+            Load += MainScreen_Load;
             ((System.ComponentModel.ISupportInitialize)pcbIcon).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -197,7 +199,7 @@
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox txtbLocation;
         private Button btnSearch;
         private Label label1;
         private PictureBox pcbIcon;
